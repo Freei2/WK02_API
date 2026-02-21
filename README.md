@@ -1,115 +1,39 @@
-# Node.js API Assignment
-
-Simple REST API using Node.js (without Express)
 
 ---
 
-## 📌 Description
+### API ไม่มี path หรือเป็น /
 
-This project is a simple API built using Node.js built-in `http` module (no external libraries).
+|  Title |   |
+|---|---|
+|  Full URL | http://localhost:3000/  |
+|  Request Method | GET |
 
-It supports:
+---
+### API มี parameter ชื่อ message = ข้อความ
 
-- GET method
-- POST method
-- JSON response
+|  Title |   |
+|---|---|
+|  Full URL | http://localhost:3000/?message=abc |
+|  Request Method | GET |
+
+#### Query Parameter
+
+| Key name | Description | Sample |
+|---|---|---|
+|message|ระบุข้อความ| abc |
 
 ---
 
-## 🚀 How to Run
+### API มี path เป็น /api/sayhi และ body เป็น { “name”: “John” } 
 
-1. Install Node.js
-2. Clone this repository
-3. Run the server
+|  Title |   |
+|---|---|
+|  Path | /api/sayhi |
+|  Full URL | http://localhost:3000/api/sayhi |
+|  Request Method | POST |
 
-```bash
-node server.js
-```
+#### Request Body (JSON)
 
-Server will start at:
-
-```
-http://localhost:3000
-```
-
----
-
-## 📡 API Endpoints
-
-### ✅ 1. GET /
-
-If no query parameter:
-
-**Request**
-```
-GET /
-```
-
-**Response**
-```json
-{ "msg": "Hello" }
-```
-
----
-
-### ✅ 2. GET /?message=anyvalue
-
-If query parameter `message` exists:
-
-**Request**
-```
-GET /?message=abc
-```
-
-**Response**
-```json
-{ "msg": "Hello, How are you?" }
-```
-
----
-
-### ✅ 3. POST /api/sayhi
-
-**Request**
-```
-POST /api/sayhi
-Content-Type: application/json
-```
-
-**Body**
-```json
-{
-  "name": "John"
-}
-```
-
-**Response**
-```json
-{
-  "msg": "Hello John, How are you?"
-}
-```
-
----
-
-## 📁 Project Structure
-
-```
-my-api/
-│
-├── server.js
-├── package.json
-└── README.md
-```
-
----
-
-## 🛠 Built With
-
-- Node.js (http module)
-
----
-
-## 👨‍💻 Author
-
-Your Name
+| Key name | Description | Sample |
+|---|---|---|
+|name|ระบุชื่อ| { "name": "John" } |
